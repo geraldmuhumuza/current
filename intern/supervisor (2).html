@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <center>
+            <form method="post" action="connect.php" class="form-input">
+                <p class="heading"><u>SUPERVISOR REGISTER</u></p>
+                <div class="supervisor-input">
+                    <label for="supervisor-name">Supervisor Name</label>
+                    <input type="text" placeholder="supervisor-name" id="supervisor-name" name="supervisor-name" required>
+                </div>
+                <div class="email-input">
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="email" id="email" name="email" required>
+                </div>
+                <div class="telephone-input">
+                    <label for="telephone">Telephone Contact</label>
+                    <input type="text" placeholder="Telehone Contact"  id="telephone" name="telephone">
+                </div>
+                <div class="password-input">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter Password" id="password" name="password" required>
+                </div>
+                <div class="confirm-input">
+                    <label for="confirm">Confirm Password</label>
+                    <input type="password" placeholder="Confirm password" id="confirm"  name="confirm" required>
+                </div>
+                <div class="btn">
+                    <button type="submit" class="btnregister" onclick="validateForm()">REGISTER</button>
+                    <button type="reset" class="btncancel" >CANCEL</button>
+                </div>
+                <div class="login">
+                    <p>Already have an Account?
+                    <a href="login.html">Login</a></p>
+                </div>
+                </div>
+            </form>
+        </center>
+        <script>
+            function validateForm() {
+                let password = document.forms["form-input"]["password"].value;
+                let confirm = document.forms["form-input"]["confirm"].value;
+                if ( password == confirm) {
+                    alert("Name must be filled out");
+                    return false;
+            }
+            }
+        </script>
+    </body>
+    <style>
+        *{
+            padding: 10px;
+            margin: 0px;
+        
+        }
+        .form-input{
+            background-color: paleturquoise;
+            width: 290px;
+            height: 550px;
+            text-align: center;
+            border: black;
+            border-radius: 20px;
+            box-shadow:0 0 10px #f80505;
+        }
+        .form-input .heading{
+            font-size: 20px;
+            font-style: oblique;
+            font-weight: bold;
+        }
+        .form-input .supervisor-input input{
+          color: black;
+          margin-top: 5px;
+          width: 200px;
+          height: 10px;
+          border: none;
+          border-radius: 4px;
+          position:flex;
+          text-transform: capitalize;
+          text-align: center;
+        }
+        .form-input .email-input input{
+            color: black;
+            margin-top: 5px;
+            width: 200px;
+            height: 10px;
+            border: none;
+            border-radius: 4px;
+            position:flex;
+            text-transform: lowercase;
+            text-align: center;
+        }
+        .form-input .telephone-input input{
+            color: black;
+            margin-top: 5px;
+            width: 200px;
+            height: 10px;
+            border: none;
+            border-radius: 4px;
+            position:flex;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        .form-input .password-input input{
+            color: black;
+            margin-top: 5px;
+            width: 200px;
+            height: 10px;
+            border: none;
+            border-radius: 4px;
+            position:flex;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        .form-input .confirm-input input{
+            color: black;
+            margin-top: 5px;
+            width: 200px;
+            height: 10px;
+            border: none;
+            border-radius: 4px;
+            position:flex;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        .form-input .supervisor-input label{
+            font-size: 17px;
+            font-weight: 100;
+        }
+        .form-input .confirm-input label{
+            font-size: 17px;
+            font-weight: 100;
+        }
+        .form-input .password-input label{
+            font-size: 17px;
+            font-weight: 100;
+        }
+        .form-input .telephone-input label{
+            font-size: 17px;
+            font-weight: 100;
+        }
+        .form-input .email-input label{
+            font-size: 17px;
+            font-weight: 100;
+        }
+        .form-input .btn .btnregister{
+            margin: 5px;
+            background-color: darkgreen;
+            color: rgb(250, 238, 238);
+            height: 30px;
+            width:100px;
+            border-radius: 15px;
+        }
+        .form-input .btn .btncancel{
+            margin: 5px;
+            background-color: rgb(253, 5, 5);
+            color: rgb(250, 238, 238);
+            height: 30px;
+            width:100px;
+            border-radius: 15px;
+        
+        }
+        .form-input .login p{
+            margin-top: 0px;
+            padding-left: 10px;
+            text-align: left;
+            font-size: 15px;
+        }
+        .form-input .login p a{
+            color: rgb(32, 0, 139);
+            font-size: 17px;
+            font-weight: bold;
+        }
+        
+    </style>
+    
+</html>
